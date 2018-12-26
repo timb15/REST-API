@@ -68,7 +68,7 @@ router.get('/courses/:id', (req, res, next) => {
         });
 });
 
-//Creates a course, sets the Location header to the URI for the course, and returns no content
+//Creates a course if the user exists in the database and attaches users id to the course, sets the Location header to the URI for the course, and returns no content
 router.post('/courses', (req, res, next) => {
     const credentials = auth(req);
     
